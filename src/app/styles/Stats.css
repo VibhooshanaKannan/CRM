@@ -1,0 +1,261 @@
+
+.stats-container {
+  position: fixed; /* Fixing the header at the top */
+  top: 50; /* Ensure it's at the very top of the page */
+  left: 0;
+  right: 0;
+  margin-top: 0; /* Remove the margin-top to prevent any space above */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+  background-color: #fcfcf6;
+  z-index: 1000;
+  max-width: 90%;
+  height: 34%;
+  margin-left: 250px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.stats-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 48px 0 40px 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.stats-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #181815;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.bar-chart-container {
+  background: #fdfdf8;
+  padding: 28px 24px 16px 24px;
+  width: 390px;
+
+}
+
+.bar-chart-title {
+  font-size: 18px;
+  font-weight: 530;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #181815;
+}
+
+.bar-chart-row {
+  display: flex;
+  align-items: flex-end;
+}
+
+.y-axis-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120px;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #181815;
+}
+
+.bar-chart {
+  display: flex;
+  gap: 22px;
+  height: 100px;
+  align-items: flex-end;
+}
+
+.bar-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar-pair {
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+  height: 100px;
+}
+
+.bar {
+  width: 13px;
+  border-radius: 2px 2px 0 0;
+}
+
+.bar.striped {
+  background: repeating-linear-gradient(
+    -45deg,
+    #eaeae7,
+    #eaeae7 4px,
+    #fdfdf8 4px,
+    #fdfdf8 8px
+  );
+}
+
+.bar.solid {
+  background-color: #181815;
+}
+
+.day-label {
+  margin-top: 4px;
+  font-size: 16px;
+  color: #181815;
+}
+
+/* Wrapper remains useful for alignment */
+.gauge-wrapper {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* The main gauge element */
+.gauge {
+  --gauge-width: 200px;
+  --gauge-height: calc(var(--gauge-width) / 3);
+  --value: 68; /* Current percentage value (0-100) - SET THIS VIA STYLE or JS */
+  position: relative;
+  width: var(--gauge-width);
+  height: var(--gauge-height);
+  overflow: visible;
+}
+
+/* Container for the percentage text */
+.gauge-percentage {
+  position: absolute;
+  bottom: 0;
+  left: -120px;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+}
+
+.percentage-value {
+  font-size: 30px;
+  font-weight: 500;
+  color: #181815;
+  margin-bottom: 1px;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.percentage-label {
+  font-size: 15px;
+  color: #50504a;
+  margin-top: 0;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 1.2;
+}
+
+/* Lines in semi-circle */
+.gauge-lines {
+  position: absolute;
+  width: 300px;
+  left: -200px;
+  height: 150px;
+  overflow: visible;
+   bottom: 0;
+  left: -200px;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+}
+
+.gauge-line {
+  position: absolute;
+  top: 10;
+  left: 78%;
+  width: 1px;
+  height: 3cm;
+  transform-origin: bottom center;
+  background-color: rgba(0, 0, 0, 0.2); /* Inactive line color */
+}
+
+.gauge-line.major {
+  height: 58px;
+  background: #000;
+} 
+.gauge-line.active {
+  background-color: #181815; /* Active line color */
+}
+
+.metric-section {
+  width: 20%; /* Full width for alignment */
+  min-width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 20px 0 0;
+  margin-left: -10px;
+  justify-content: flex-start; /* Align metrics to the left */
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+justify-content: space-between;
+  margin-left: -30px;
+}
+
+.metric-value {
+  font-size: 36px;
+  font-weight: 550;
+  color: #181815;
+  margin-top: 20px;
+  margin-bottom: 40px; 
+  display: flex;
+  align-items: center; /* For arrow alignment */
+}
+
+.metric-label {
+  font-size: 16px;
+  color: #181815;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.arrow {
+  margin-left: 12px;
+  font-size: 22px;
+  font-weight: 300;
+  color: #181815;
+  opacity: 0.9;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+}
+
+@media (max-width: 900px) {
+  .stats-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 32px 16px;
+    gap: 32px;
+  }
+  .stats-section,
+  .gauge-section,
+  .metric-section {
+    width: 100%;
+    min-width: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+}

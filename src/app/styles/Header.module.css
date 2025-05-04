@@ -1,0 +1,64 @@
+.header {
+  position: fixed;  /* Fixing the header at the top */
+  top: 0;           /* Ensure it's at the very top of the page */
+  left: 0;
+  right: 0;
+  margin-top: 0;     /* Remove the margin-top to prevent any space above */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #fcfcf6;
+  z-index: 1000; 
+  max-width: 90%;
+  margin-left: 250px;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.searchContainer input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+}
+
+.searchIcon {
+  color: #555;
+  font-size: 16px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.addButton {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
