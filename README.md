@@ -106,14 +106,14 @@ Displaying leads at various stages, such as "Contacted", "Negotiation", "Offer S
 
 
 
-##INSTRUCTIONS TO CLONE AND RUN
- Clone the repository :
+## INSTRUCTIONS TO CLONE AND RUN
+ ### Clone the repository :
      git clone https://github.com/VibhooshanaKannan/CRM.git
- Navigate to the Project Directory :
+ ### Navigate to the Project Directory :
      cd crm
- Install Dependencies :
+ ### Install Dependencies :
      npm install
- Run :
+ ### Run :
     npm run dev
 
  
