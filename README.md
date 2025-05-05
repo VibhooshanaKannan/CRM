@@ -8,7 +8,7 @@
 
 Components 
 ## Sidebar Component - 
-      ### Breakdown of the Code:
+### Breakdown of the Code:
 
 1. **React & Image Import**:
    - The component uses **React** to create the structure.
@@ -98,10 +98,22 @@ The **Stats** component provides a visual representation of the customer and fin
 ## CRMPipelineBoard Component
 Displaying leads at various stages, such as "Contacted", "Negotiation", "Offer Sent", and "Deal Closed". Each stage shows key information like company details, activity (messages and calls), and contact info.
 
-## Features
+### Features
 - Displays leads in stages of the sales pipeline.
 - Shows company details, messages, calls, dates, and manager info.
 - Highlights specific leads with different styles (e.g., dark theme for "Prime Estate").
 - Fully responsive design.
 
 
+
+##INSTRUCTIONS TO CLONE AND RUN
+ Clone the repository :
+     git clone https://github.com/VibhooshanaKannan/CRM.git
+ Navigate to the Project Directory :
+     cd crm
+ Install Dependencies :
+     npm install
+ Run :
+    npm run dev
+
+ 
