@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import "../styles/Stats.css";
 
 export default function Stats() {
@@ -7,36 +7,17 @@ export default function Stats() {
   const newCustomersData = [6, 11, 10, 4, 11];
   const previousCustomersData = [3, 6, 7, 2, 6];
   const maxCustomers = 11;
-  const percent = 68;
-  const totalLines = 36;
-
-  useEffect(() => {
-    const gaugeLines = document.getElementById("gauge-lines");
-
-    if (gaugeLines) {
-      gaugeLines.innerHTML = "";
-
-      for (let i = 0; i < totalLines; i++) {
-        const line = document.createElement("div");
-        line.className = "gauge-line";
-
-        const angle = i * (180 / (totalLines - 1));
-        line.style.transform = `rotate(${angle - 90}deg)`;
-
-        const lineValue = (angle / 180) * 100;
-        if (lineValue <= percent) {
-          line.classList.add("active");
-        }
-
-        gaugeLines.appendChild(line);
-      }
-    }
-  }, []);
+  const percent = 68; // percent out of 100
+  const radius = 75;
+  const stroke = 5;
+  const normalizedRadius = radius - stroke / 2;
+  const circumference = normalizedRadius * 2 * Math.PI;
+  const strokeDashoffset =
+    circumference - (percent / 100) * circumference;
 
   return (
     <div className="stats-container">
       <div className="stats-card">
-        {/* New customers section with bar chart */}
         <div className="bar-chart-container">
           <div className="bar-chart-title">New customers</div>
           <div className="bar-chart-row">
@@ -73,18 +54,45 @@ export default function Stats() {
         </div>
       </div>
 
-      {/* Gauge Chart */}
+      {/* Beautiful Arc Gauge with SVG */}
       <div className="gauge-wrapper">
         <div className="gauge">
-          <div className="gauge-lines" id="gauge-lines"></div>
+          <svg
+            height={radius * 2}
+            width={radius * 2}
+            className="gauge-svg"
+          >
+            <circle
+              stroke="#DDDDDD"
+              fill="transparent"
+              strokeWidth={stroke}
+              r={normalizedRadius}
+              cx={radius}
+              cy={radius}
+              strokeDasharray={circumference + " " + circumference}
+              strokeDashoffset={0}
+            />
+            <circle
+              stroke="#48494B"
+              fill="transparent"
+              strokeWidth={stroke}
+              r={normalizedRadius}
+              cx={radius}
+              cy={radius}
+              strokeDasharray={circumference + " " + circumference}
+              strokeDashoffset={strokeDashoffset}
+              strokeLinecap="round"
+              className="progress-ring"
+              style={{ transform: "rotate(-90deg)", transformOrigin: "50% 50%" }}
+            />
+          </svg>
           <div className="gauge-percentage">
-            <div className="percentage-value">68%</div>
-            <div className="percentage-label">Engaged time</div>
+            <div className="percentage-value">{percent}%</div>
+            <div className="percentage-label">Successful deals</div>
           </div>
         </div>
       </div>
 
-      {/* Tasks in progress */}
       <div className="stats-section metric-section">
         <div className="metric">
           <div className="metric-value">53</div>
@@ -97,7 +105,6 @@ export default function Stats() {
         </div>
       </div>
 
-      {/* Prepayments */}
       <div className="stats-section metric-section">
         <div className="metric">
           <div className="metric-value">$ 15.890</div>

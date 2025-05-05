@@ -1,9 +1,9 @@
 .header {
-  position: fixed;  /* Fixing the header at the top */
-  top: 0;           /* Ensure it's at the very top of the page */
+  position: fixed;  
+  top: 0;          
   left: 0;
   right: 0;
-  margin-top: 0;     /* Remove the margin-top to prevent any space above */
+  margin-top: 0;     
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +39,7 @@
 .headerActions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 50px;
 }
 
 .iconButton {

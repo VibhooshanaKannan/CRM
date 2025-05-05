@@ -1,24 +1,20 @@
-/* CRMPipelineBoard.css */
 .pipeline-container {
   display: flex;
   gap: 60px;
-  top: 200;   
-  background-color:white;
-  overflow-x:hidden;
+  top: 200;
+  background-color: white;
+  overflow-x: hidden;
   margin-top: -500px;
-  margin-left:250px;
-padding: 30px;
+  margin-left: 250px;
+  padding: 30px;
   width: 1000vh;
   box-sizing: border-box;
-
-  
 }
 
 .pipeline-column {
   min-width: 250px;
   width: 200px;
   margin-right: 8px;
-
 }
 
 .column-header {
@@ -26,13 +22,14 @@ padding: 30px;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
-
 }
 
 .stage-name {
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 550;
+
+  font-size: 18px;
   color: #111827;
+  margin-top: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,11 +39,11 @@ padding: 30px;
 .stage-count {
   background-color: white;
   color: #111827;
-  font-size: 14px;
+  font-size: 15px;
   padding: 2px 8px;
   border-radius: 4px;
   border: 1px solid #e5e7eb;
-  font-weight: 400;
+  font-weight: 500;
   display: flex;
   align-items: center;
 }
@@ -61,8 +58,9 @@ padding: 30px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  max-width: 250px;
+  padding: 13px;
+  border: 1px solid gainsboro;
+  max-width: 240px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -84,18 +82,18 @@ padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 8px;
+  margin-bottom: 1px;
+  margin-left: 10px;
 }
 
 .company-name {
-  font-weight: 600;
+  font-weight: 540;
   font-size: 15px;
-  margin: 0;
-  line-height: 1.2;
+  margin: 3;
 }
 
 .more-btn {
-  color: #9ca3af;
+  color: black;
   background: none;
   border: none;
   cursor: pointer;
@@ -111,13 +109,20 @@ padding: 30px;
 }
 
 .company-description {
-  font-size: 13px;
-  color: #6b7280;
-  margin: 0 0 10px 0;
+  font-size: 12px;
+  color: black;
+  margin: 2px 0 10px 3px;
   line-height: 1.2;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.deal-closed-column .lead-card {
+  background-color: whitesmoke;
+}
+.deal-closed-column .date-box {
+  background-color: whitesmoke;
 }
 
 .dark-card .company-description {
@@ -193,6 +198,20 @@ padding: 30px;
   color: #6b7280;
 }
 
+.date-box {
+  background-color: white; 
+  padding: 4px 5px;
+  border: 0.5px solid #6b7280;
+  border-radius: 4px;
+  display: flex;
+  font-weight: 530;
+  align-items: center;
+  gap: 0.1rem;
+  color: black;
+  margin-left: 15px;
+  width: fit-content;
+}
+
 .dark-card .meta-info {
   color: #9ca3af;
 }
@@ -201,50 +220,28 @@ padding: 30px;
   display: flex;
   gap: 12px;
 }
-
-/* Phone icon styling */
 .phone-icon {
   font-size: 14px;
 }
 
-/* Card content layout */
 .lead-card {
   min-height: 120px;
 }
 
-/* Make sure descriptions don't overflow */
 .company-description {
   padding: 10px;
 }
 
-/* Match the overall layout from the image */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f9fafb;
-  font-family: "Inter", sans-serif;
-}
-
-/* To match the exact look of the date/message/call icons */
-.meta-info svg {
-  width: 14px;
-  height: 16px;
-  margin-right: 4px;
-}
-
-/* Card sizes to match the image */
 .lead-card {
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Ensure proper spacing in footer */
 .activity-info {
   display: flex;
   align-items: center;
 }
 
-/* Fix card spacing */
 .leads-container {
   gap: 16px;
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import '../styles/Sidebar.css';
+import React from "react";
+import Image from "next/image";
+import "../styles/Sidebar.css";
 
 const Sidebar = () => {
   return (
@@ -8,7 +8,7 @@ const Sidebar = () => {
       <div className="logo">
         <h2>BizLink</h2>
       </div>
-      
+
       <div className="nav-section">
         <ul>
           <li className="nav-item">
@@ -34,11 +34,11 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-      
+
       <div className="section-header">
         <h3>Projects</h3>
       </div>
-      
+
       <div className="projects-section">
         <ul>
           <li className="project-item">
@@ -60,21 +60,21 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-      
+
       <div className="section-header members-header">
         <h3>Members</h3>
         <button className="add-member-btn">
           <i className="plus-icon"></i>
         </button>
       </div>
-      
+
       <div className="members-section">
         <ul>
           <li className="member-item">
             <div className="member-avatar">
               <div className="avatar-wrapper">
-                <Image 
-                  src="/images/ashley.png" 
+                <Image
+                  src="/images/ashley.png"
                   alt="Sandra Perry"
                   width={32}
                   height={32}
@@ -88,11 +88,11 @@ const Sidebar = () => {
               <span className="member-role">Product Manager</span>
             </div>
           </li>
-          
+
           <li className="member-item">
             <div className="member-avatar">
               <div className="avatar-wrapper">
-                <Image 
+                <Image
                   src="/images/omar.png"
                   alt="Antony Cardenas"
                   width={32}
@@ -107,12 +107,12 @@ const Sidebar = () => {
               <span className="member-role">Sales Manager</span>
             </div>
           </li>
-          
+
           <li className="member-item">
             <div className="member-avatar">
               <div className="avatar-wrapper">
-                <Image 
-                  src="/images/pablo.jpg" 
+                <Image
+                  src="/images/pablo.jpg"
                   alt="Jamal Connolly"
                   width={32}
                   height={32}
@@ -126,12 +126,12 @@ const Sidebar = () => {
               <span className="member-role">Growth Manager</span>
             </div>
           </li>
-          
+
           <li className="member-item">
             <div className="member-avatar">
               <div className="avatar-wrapper">
-                <Image 
-                  src="/images/ashley.png" 
+                <Image
+                  src="/images/ashley.png"
                   alt="Cara Carr"
                   width={32}
                   height={32}
@@ -145,12 +145,12 @@ const Sidebar = () => {
               <span className="member-role">SEO Specialist</span>
             </div>
           </li>
-          
+
           <li className="member-item last-member">
             <div className="member-avatar">
               <div className="avatar-wrapper">
-                <Image 
-                  src="/images/marlee.png" 
+                <Image
+                  src="/images/marlee.png"
                   alt="Iona Rollins"
                   width={32}
                   height={32}

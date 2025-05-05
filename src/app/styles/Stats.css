@@ -1,10 +1,9 @@
-
 .stats-container {
-  position: fixed; /* Fixing the header at the top */
-  top: 50; /* Ensure it's at the very top of the page */
+  position: fixed;
+  top: 50;
   left: 0;
   right: 0;
-  margin-top: 0; /* Remove the margin-top to prevent any space above */
+  margin-top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,8 +13,8 @@
   max-width: 90%;
   height: 34%;
   margin-left: 250px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .stats-card {
   display: flex;
@@ -44,7 +43,6 @@
   background: #fdfdf8;
   padding: 28px 24px 16px 24px;
   width: 390px;
-
 }
 
 .bar-chart-title {
@@ -114,104 +112,60 @@
   font-size: 16px;
   color: #181815;
 }
-
-/* Wrapper remains useful for alignment */
 .gauge-wrapper {
-  position: relative;
-  width: 200px;
-  height: 150px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-}
-
-/* The main gauge element */
-.gauge {
-  --gauge-width: 200px;
-  --gauge-height: calc(var(--gauge-width) / 3);
-  --value: 68; /* Current percentage value (0-100) - SET THIS VIA STYLE or JS */
+  align-items: center;
+  margin: 20px 0 0 0;
   position: relative;
-  width: var(--gauge-width);
-  height: var(--gauge-height);
-  overflow: visible;
 }
 
-/* Container for the percentage text */
+.gauge {
+  position: relative;
+  width: 370px;
+  height: 120px;
+}
+
+.gauge-svg {
+  transform: rotate(360deg);
+}
+
 .gauge-percentage {
   position: absolute;
-  bottom: 0;
-  left: -120px;
-  transform: translateX(-50%);
+  top: 60%;
+  margin-right: 20px;
+  margin-left: -110px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 3;
 }
 
 .percentage-value {
-  font-size: 30px;
-  font-weight: 500;
-  color: #181815;
-  margin-bottom: 1px;
-  letter-spacing: 0.5px;
-  line-height: 1;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .percentage-label {
-  font-size: 15px;
-  color: #50504a;
-  margin-top: 0;
-  font-weight: 400;
-  letter-spacing: 0.1px;
-  line-height: 1.2;
-}
-
-/* Lines in semi-circle */
-.gauge-lines {
-  position: absolute;
-  width: 300px;
-  left: -200px;
-  height: 150px;
-  overflow: visible;
-   bottom: 0;
-  left: -200px;
-  transform: translateX(-50%);
-  text-align: center;
-  z-index: 3;
-}
-
-.gauge-line {
-  position: absolute;
-  top: 10;
-  left: 78%;
-  width: 1px;
-  height: 3cm;
-  transform-origin: bottom center;
-  background-color: rgba(0, 0, 0, 0.2); /* Inactive line color */
-}
-
-.gauge-line.major {
-  height: 58px;
-  background: #000;
-} 
-.gauge-line.active {
-  background-color: #181815; /* Active line color */
+  font-size: 0.7rem;
+  color: #666;
 }
 
 .metric-section {
-  width: 20%; /* Full width for alignment */
+  width: 20%;
   min-width: 200px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 20px 20px 0 0;
   margin-left: -10px;
-  justify-content: flex-start; /* Align metrics to the left */
+  justify-content: flex-start;
 }
 
 .metric {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-justify-content: space-between;
+  justify-content: space-between;
   margin-left: -30px;
 }
 
@@ -220,9 +174,9 @@ justify-content: space-between;
   font-weight: 550;
   color: #181815;
   margin-top: 20px;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
   display: flex;
-  align-items: center; /* For arrow alignment */
+  align-items: center;
 }
 
 .metric-label {

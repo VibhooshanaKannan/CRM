@@ -1,7 +1,6 @@
-// src/app/page.js
 
 import Head from "next/head";
-// Correct the import paths based on your project structure
+
 import Sidebar from "../app/components/Sidebar";
 import Header from "../app/components/Header";
 import Stats from "../app/components/Stats";
@@ -17,19 +16,15 @@ export default function Home() {
       </Head>
 
       <div className="dashboard-content">
-        {/* Sidebar */}
         <Sidebar />
 
-        {/* Main content */}
         <div className="main-content">
           <Header />
 
-          {/* Stats */}
           <div className="stats-section">
             <Stats />
           </div>
 
-          {/* Pipeline Column */}
           <div className="pipeline-section">
             <PipelineColumn />
           </div>
