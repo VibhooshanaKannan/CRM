@@ -7,7 +7,7 @@
 - **Custom Components** – Built for a clean and responsive UI
 
 Components 
-## Sidebar Component - 
+## Sidebar Component
 ### Breakdown of the Code:
 
 1. **React & Image Import**:
@@ -39,7 +39,7 @@ Components
 8. **CSS Modules**:
    - **Sidebar.css** is used to style the sidebar, and **CSS Modules** ensure that the styles are scoped only to this component.
   
-## Header Component Explanation
+## Header Component 
 
 The **Header** component is part of the **BizLink CRM Dashboard**. It provides a user-friendly interface for searching, sorting, filtering, and managing customer data, as well as accessing user-specific settings.
 
@@ -103,6 +103,11 @@ Displaying leads at various stages, such as "Contacted", "Negotiation", "Offer S
 - Shows company details, messages, calls, dates, and manager info.
 - Highlights specific leads with different styles (e.g., dark theme for "Prime Estate").
 - Fully responsive design.
+
+
+### Output Image
+![image](https://github.com/user-attachments/assets/695e4e10-3b74-4726-8eb3-9e0133e7800f)
+
 
 
 
